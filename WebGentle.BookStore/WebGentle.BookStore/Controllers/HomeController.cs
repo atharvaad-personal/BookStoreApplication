@@ -9,11 +9,11 @@ namespace WebGentle.BookStore.Controllers
         {
             _logger = logger; 
         }
-        public string Index()
+        public ViewResult Index()
         {
             _logger.LogInformation("Index Method Execution started");
 
-            return "WebGentle";
+            return View();
         }
     }
 }
