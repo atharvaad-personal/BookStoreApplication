@@ -15,5 +15,19 @@ namespace WebGentle.BookStore.Controllers
 
             return View();
         }
+
+        public ViewResult AboutUs()
+        {
+            _logger.LogInformation("AboutUs Method Execution started");
+
+            return View();
+        }
+
+        public ViewResult ContactUs()
+        {
+            _logger.LogInformation("ContactUs Method Execution started");
+
+            return View();
+        }
     }
 }

@@ -12,9 +12,10 @@ namespace WebGentle.BookStore.Controllers
             _bookRepository = new BookRepository();
 
         } 
-       public List<BookModel> GetAllBooks()
+       public /*List<BookModel>*/ ViewResult GetAllBooks()
         {
-            return _bookRepository.GetAllBooks();
+            var books = _bookRepository.GetAllBooks();
+            return View(books);
         }
 
         public BookModel GetBook(int id)
