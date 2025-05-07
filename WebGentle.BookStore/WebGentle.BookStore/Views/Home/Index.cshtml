@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -13,8 +12,8 @@
 <body>
     <h1>Welcome to the book store application</h1>
     <h2>@DateTime.Now.ToString("yyyy-MM-ddThh:mm:ss")</h2>
-    <h3>@(3+3)</h3>
-    <hr/>
+    <h3>@(3 + 3)</h3>
+    <hr />
     <h1>Multiline - </h1>
     @{
         int a = 3;
@@ -23,6 +22,51 @@
     }
     <h1>@c</h1>
     <h2>Here is the @@TagHelper</h2>
+    <hr />
+    @{
+        int x = 10;
+        if(x == 10 )
+        {
+            <h1>Hello from if block and value = @a</h1>
+        }
+        else
+        {
+            <h2>Hello from from else block</h2>
+        }
+    }
+    <hr />
+    @{
+        int s = 10;
+        int t = 1;
 
+        // Value of s is 10 then value of t should be 10 otherwise value of t should be 5
+        <h1>Ternary Operator - @(s==10 ? t = 10 : t = 5)</h1>
+        <h1>Value of t - @t</h1>
+        <hr />
+
+        int p = 2;
+        @switch (p)
+        {
+            case 1:
+                <h2>I am 1</h2>
+                break;
+            case 2:
+                <h2>I am 2</h2>
+                break;
+            case 3:
+                <h2>I am 3</h2>
+                break;
+            case 4:
+                <h2>I am 4</h2>
+                break;
+            case 5:
+                <h2>I am 5</h2>
+                break;
+            default:
+                <h2>I am default</h2>
+                break;
+
+        }
+    }
 </body>
 </html>
