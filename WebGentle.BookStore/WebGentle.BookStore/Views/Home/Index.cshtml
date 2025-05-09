@@ -43,7 +43,6 @@
         <h1>Ternary Operator - @(s==10 ? t = 10 : t = 5)</h1>
         <h1>Value of t - @t</h1>
         <hr />
-
         int p = 2;
         @switch (p)
         {
@@ -66,6 +65,19 @@
                 <h2>I am default</h2>
                 break;
 
+        }
+        <hr />
+
+        @for(int i = 0; i<10 ; i++)
+        {
+            <h1>Welcome from For Loop having index @i</h1>
+        }
+
+        var list = new List<int> { 0, 1, 2, 3, 4, 5 };
+
+        @foreach(var lists in list)
+        {
+            <h1>Hello from ForEach loop having @lists</h1>
         }
     }
 </body>
