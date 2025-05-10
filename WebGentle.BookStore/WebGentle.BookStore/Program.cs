@@ -1,4 +1,5 @@
-﻿using Serilog;
+﻿using Microsoft.Extensions.FileProviders;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,14 @@ app.UseHttpsRedirection(); // 👈 Redirect HTTP -> HTTPS
 app.UseStaticFiles();       // 👈 Serve static files like CSS, JS, images
 
 app.UseRouting();           // 👈 Enable routing
+
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider
+    (Path.Combine(Directory.GetCurrentDirectory(), "MyStaticFiles")),
+
+    RequestPath = "/MyStaticFiles"
+});
 
 app.UseAuthorization();     // 👈 Add authorization middleware if needed
 
