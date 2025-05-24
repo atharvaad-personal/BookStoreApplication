@@ -276,3 +276,4 @@ obj/
 # Common node modules locations
 /node_modules
 /wwwroot/node_modules
+/WebGentle.BookStore/WebGentle.BookStore/wwwroot/lib
