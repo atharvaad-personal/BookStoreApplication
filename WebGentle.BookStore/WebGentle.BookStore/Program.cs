@@ -13,6 +13,10 @@ Log.Logger = new LoggerConfiguration()
 // Add services to the container
 builder.Services.AddControllersWithViews(); // 👈 Adds MVC (Controller + Views)
 
+#if DEBUG
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+#endif
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
